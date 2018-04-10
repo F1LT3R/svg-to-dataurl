@@ -1,0 +1,68 @@
+{
+	"name": "svg-to-dataurl",
+	"main": "svg-to-dataurl",
+	"version": "1.0.0",
+	"description": "😹 convert SVGs to DataURLs",
+	"license": "MIT",
+	"repository": "F1LT3R/svg-to-dataurl",
+	"author": {
+		"name": "F1LT3R",
+		"email": "al@pwn.io",
+		"url": "f1lt3r.io"
+	},
+	"scripts": {
+		"test": "xo && yarn run cover",
+		"unit": "ava",
+		"watch": "ava --watch",
+		"cover": "nyc --reporter=lcov --reporter=html --reporter=text ava *.test.js",
+		"coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn test"
+		}
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"svg",
+		"svg-to-dataurl",
+		"data",
+		"url",
+		"data-url",
+		"dataurl",
+		"data-uri",
+		"datauri",
+		"encode",
+		"base64"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"coveralls": "^3.0.0",
+		"husky": "^0.15.0-rc.13",
+		"nyc": "^11.6.0",
+		"xo": "^0.20.3"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	},
+	"xo": {
+		"esnext": true,
+		"semicolon": false,
+		"globals": [
+			"__dirname"
+		],
+		"rules": {
+			"no-console": 1,
+			"space-before-function-paren": 0
+		}
+	},
+	"ava": {
+		"failFast": true
+	}
+}
