@@ -1,6 +1,6 @@
 {
 	"name": "svg-to-dataurl",
-	"main": "svg-to-dataurl",
+	"main": "index.js",
 	"version": "1.0.0",
 	"description": "😹 convert SVGs to DataURLs",
 	"license": "MIT",
